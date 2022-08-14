@@ -27,4 +27,6 @@ def buscaSp(especies: List[str],
 
 @main.command("teste")
 def teste():
+    """Funcao testando como chamar a funcao caso o "programa" tenha mais de uma. Sem utilidade
+    """
     print("teste")
