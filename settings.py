@@ -8,6 +8,8 @@ DATA = date.today()
 NIVEL = ["ScientificName", "family"]
 
 ERRO_COLUNA_ARQUIVO = str(
-    "Erro: Verificar se há coluna Especie no arquivo. Busca não iniciada.")
+    "Erro: Verificar se há coluna Especie no arquivo. Busca não iniciada."
+)
 ERRO_NIVEL = str(
-    f"Erro: nível taxonômico deve ser 'ScientificName' ou 'family'. Busca não iniciada.")
+    f"Erro: nível taxonômico deve ser 'ScientificName' ou 'family'. Busca não iniciada."
+)
