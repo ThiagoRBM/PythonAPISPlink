@@ -1,17 +1,20 @@
+#!/usr/bin/env python3
 import typer
 from typing import List
 
 import core
 
 main = typer.Typer(
-    help="Busca e salva informações de coletas de espécies disponíveis no SPLink (https://specieslink.net/) através de API e salva em arquivo '.csv'.")
+    help="Busca e salva informações de coletas de espécies disponíveis no SPLink (https://specieslink.net/) através de API e salva em arquivo '.csv'."
+)
 
 
 @main.command("buscaSp")
-def buscaSp(especies: List[str],
-            nivel: str = typer.Option(None, "-t", "--nivel"),
-            caminhoTabela: str = typer.Option(None, "-s", "--nome")
-            ):
+def buscaSp(
+    especies: List[str],
+    nivel: str = typer.Option(None, "-t", "--nivel"),
+    caminho_tabela: str = typer.Option(None, "-s", "--nome"),
+):
     """Funcao que busca informacoes de espécies disponíveis no SPLink (https://specieslink.net/) através de API e salva em arquivo '.txt.'
 
     Argumentos:\n
@@ -22,11 +25,10 @@ def buscaSp(especies: List[str],
     com a data no formato ano_mes_dia. Fornecer caminho completo + nome do arquivo (e.g. "home/usuario/tabela.csv")
     """
 
-    core.buscaAPI(especies, nivel, caminhoTabela)
+    core.buscaAPI(especies, nivel, caminho_tabela)
 
 
 @main.command("teste")
 def teste():
-    """Funcao testando como chamar a funcao caso o "programa" tenha mais de uma. Sem utilidade
-    """
+    """Funcao testando como chamar a funcao caso o "programa" tenha mais de uma. Sem utilidade"""
     print("teste")
