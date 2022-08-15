@@ -15,7 +15,7 @@ def buscaSp(
     nivel: str = typer.Option(None, "-t", "--nivel"),
     caminho_tabela: str = typer.Option(None, "-s", "--nome"),
 ):
-    """Funcao que busca informacoes de espécies disponíveis no SPLink (https://specieslink.net/) através de API e salva em arquivo '.txt.'
+    """Funcao que busca informacoes de espécies disponíveis no SPLink (https://specieslink.net/) através de API e salva em arquivo '.csv.'
 
     Argumentos:\n
     especies: OBRIGATÓRIO. A ou as espécies a serem procuradas (pode ser gênero). Pode ser o caminho para um arquivos ".csv" ou ".txt" e nesse caso, as espécies devem estar listadas em uma coluna com nome "Especies".\n
