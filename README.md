@@ -10,8 +10,7 @@ Projeto feito para treinar o que foi apresentado pelo Bruno Rocha na #PythonWeek
 	
 
 ###### Argumentos:
-   - **especies:** OBRIGATÓRIO. A ou as espécies a serem procuradas (pode ser gênero). Pode ser o caminho para um arquivos ".csv" ou ".txt" e nesse caso, 
-    as espécies devem estar listadas em uma coluna com nome "Especies".
+   - **especies:** OBRIGATÓRIO. A ou as espécies a serem procuradas (pode ser gênero). Pode ser o caminho para um arquivos ".csv" ou ".txt" e nesse caso, as espécies devem estar listadas em uma coluna com nome "Especies"; nesse caso, indicar o caminho completo para o arquivo.
    - **nivel:** OPCIONAL. Por padrão busca por espécie ou gênero. Se "family", busca por espécies da família.
    - **caminho_tabela:** OPCIONAL. Localização em que a tabela com as informações das espécies serão salvas.
     Se deixado em branco, a tabela será salva no diretório corrente, com o nome 'busca_SPLink_data.csv',
