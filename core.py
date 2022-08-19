@@ -5,6 +5,7 @@ import requests
 import pandas as pd
 import re
 import time
+import sys
 
 import settings
 
@@ -20,8 +21,11 @@ def buscaAPI(
         try:
             sp["Especies"]
         except KeyError:
-            print(f"\n\n{settings.ERRO_COLUNA_ARQUIVO}\n\n")
-            return
+            settings.log.error(
+                settings.ERRO_COLUNA_ARQUIVO  # erro pela lib logging, em settings.py
+            )
+            # print(f"\n\n{settings.ERRO_COLUNA_ARQUIVO}\n\n") ## erro sem a lib logging
+            sys.exit(1)
         print(f"{sp}\n\n")
         especies = [especie.strip() for especie in sp["Especies"]]
 
@@ -33,7 +37,7 @@ def buscaAPI(
         print(
             f"\n\n{settings.ERRO_NIVEL}\nNível taxônomico buscado: '{nivel}'\n\n"
         )
-        return
+        sys.exit(2)
 
     url_base = f"{settings.API_BASE_URL}{nivel}/"
     url_req = [
